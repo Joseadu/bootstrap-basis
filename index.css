@@ -21,6 +21,7 @@ a {
 
 .btn-platzi:hover {
     background-color: var(--green-platzi-hover);
+    color: whtie !important;
 }
 
 
