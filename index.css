@@ -31,6 +31,10 @@ a {
     width: 80px;
 }
 
+.navbar-nav .show>.nav-link {
+    padding-top: 0 !important;
+}
+
 
 /* MAIN */
 

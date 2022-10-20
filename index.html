@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent">
 
     <!-- NAVBAR -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./assets/images/platzi-logo.png" alt="Platzi logo">
@@ -31,18 +31,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Conferencia</a>
+                        <a class="nav-link" aria-current="page" href="#main">Conferencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Oradores</a>
-                    </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Lugar y fecha</a>
+                        <a class="nav-link" href="#speakers">Oradores</a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-platzi" href="#">Tickets</a>
+                        <a class="nav-link" href="#place-time">Lugar y fecha</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-platzi" href="#">Entradas</a>
                     </li>
                 </ul>
             </div>
@@ -66,16 +66,19 @@
                 </div>
             </div>
             <div class="overlay">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 offset-md-6 text-center text-md-end">
-                                <h1>Platzi Conf Hawaii</h1>
-                                <p class="d-none d-md-block">Platzi Conf llega por primera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento y experiencia que los expertos están creando para el futuro de internet. Ven a conocer a miembros del Team Platzi, a otros estudiantes y a los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
-                                <a class="btn btn-outline-light" href="#">Quiero ser orador</a>
-                                <button class="btn btn-platzi" type="button">Tickets</button>
-                            </div>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 offset-md-6 text-center text-md-end">
+                            <h1>Platzi Conf Hawaii</h1>
+                            <p class="d-none d-md-block">Platzi Conf llega por primera vez a Hawaii! Un evento para
+                                compartir con nuestra comunidad el conocimiento y experiencia que los expertos están
+                                creando para el futuro de internet. Ven a conocer a miembros del Team Platzi, a otros
+                                estudiantes y a los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                            <a class="btn btn-outline-light" href="#" data-bs-target="#staticBackdrop" data-bs-toggle="modal">Participa en nuestro sorteo</a>
+                            <button class="btn btn-platzi" type="button">Entradas</button>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </main>
@@ -98,8 +101,9 @@
                         <div class="card-body">
                             <span class="badge bg-warning mb-1">Javascript</span>
                             <span class="badge bg-info mb-1">ReactJS</span>
-                          <h5 class="card-title">Sacha Lifszyc</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Sacha Lifszyc</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -108,8 +112,9 @@
                         <img src="./assets/speakers/freddy.jpeg" class="card-img-top" alt="Speaker Sacha">
                         <div class="card-body">
                             <span class="badge bg-dark mb-1">Business</span>
-                          <h5 class="card-title">Freddy Vega</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Freddy Vega</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -118,8 +123,9 @@
                         <img src="./assets/speakers/leonidas2.jpeg" class="card-img-top" alt="Speaker Sacha">
                         <div class="card-body">
                             <span class="badge bg-success mb-1">Frontend</span>
-                          <h5 class="card-title">Leonidas Esteban</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Leonidas Esteban</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -129,8 +135,9 @@
                         <div class="card-body">
                             <span class="badge bg-secondary mb-1">SASS</span>
                             <span class="badge bg-danger mb-1">Angular</span>
-                          <h5 class="card-title">Christian Van Der H.</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Christian Van Der H.</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                         </div>
                     </div>
                 </div>
@@ -148,8 +155,12 @@
                 </div>
                 <div class="honolulu-info col-12 col-lg-6 text-white p-3 p-md-4 align-items-center">
                     <h2 class="text">Honolulu - 16 Octubre 2025</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aut magnam, nihil dolorem tenetur fugiat repellendus velit quo? A, dolores tempora rerum voluptate tempore quo obcaecati magnam laborum voluptates reiciendis error ullam! Autem alias sed iste debitis harum temporibus. Molestiae.</p>
-                    <a class="btn btn-outline-light" href="https://es.wikipedia.org/wiki/Honolulu" target="_blank">Conoce más</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aut magnam, nihil dolorem
+                        tenetur fugiat repellendus velit quo? A, dolores tempora rerum voluptate tempore quo obcaecati
+                        magnam laborum voluptates reiciendis error ullam! Autem alias sed iste debitis harum temporibus.
+                        Molestiae.</p>
+                    <a class="btn btn-outline-light" href="https://es.wikipedia.org/wiki/Honolulu"
+                        target="_blank">Conoce más</a>
                 </div>
             </div>
         </div>
@@ -175,15 +186,16 @@
                     <form>
                         <div class="row">
                             <div class="col-12 col-md-6">
-                              <input type="text" class="form-control" placeholder="Nombre" aria-label="apellido">
+                                <input type="text" class="form-control" placeholder="Nombre" aria-label="apellido">
                             </div>
                             <div class="col-12 col-md-6 mt-2 mt-md-0">
-                              <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
                             </div>
                         </div>
                         <div class="form-row mt-3">
                             <div class="form-group col">
-                                <textarea placeholder="¿Sobre qué quieres hablar?" class="form-control form-control-lg" name="text" id="textarea" cols="1" rows="2"></textarea>
+                                <textarea placeholder="¿Sobre qué quieres hablar?" class="form-control form-control-lg"
+                                    name="text" id="textarea" cols="1" rows="2"></textarea>
                                 <small>Recuerda poner un título a tu charla</small>
                             </div>
                             <div class="form-row">
@@ -197,6 +209,36 @@
             </div>
         </div>
     </section>
+
+
+    <!-- MODAL -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Gana una entrada a Platzi Conf!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="text" class="form-control" placeholder="Email" aria-label="email">
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <small>Te enviaremos un corre con el resultado del sorteo. Suerte!</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-platzi">Participar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- FOOTER -->
